@@ -1,0 +1,67 @@
+.App {
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.main-text {
+  color: #0000ff;
+}
+
+.text {
+  color: #282829;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 250px;
+  height: 300px;
+}
+
+.card:nth-child(even) {
+  background-color: #d4eff8;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 1px 2px 2px #eee;
+  transition: all ease-in 300ms;
+}
+
+.card-title {
+  color: #0000ff;
+}
+
+.card-content {
+  opacity: 0;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+
+.content-right {
+  margin-left: calc(100% - 270px);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .card {
+    background-color: #d4eff8;
+  }
+
+  .content-right {
+    margin-left: 0;
+  }
+}
